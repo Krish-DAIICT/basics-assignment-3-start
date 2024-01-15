@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>
+          Add a paragraph with any content of your choice (e.g. 'Secret Password
+          = tuna')
+        </li>
+        <li>
+          Toggle the displaying of that paragraph with the button created in the
+          first step
+        </li>
+        <li>
+          Log all button clicks in an array and output that array below the
+          secret paragraph (maybe log a timestamp or simply an incrementing
+          number)
+        </li>
+        <li>
+          Starting at the 5th log item, give all future log items a blue
+          background (via ngStyle) and white color (ngClass)
+        </li>
+      </ol>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="container">
+        <input type="text" [(ngModel)]="push_str" />
+      </div>
+      <br />
+      <div class="container">
+        <button class="btn btn-success  mr-1" (click)="addThing()">
+          Submit
+        </button>
+        <button class="btn btn-primary" (click)="showCont = !showCont">
+          Toggle View
+        </button>
+      </div>
+      <br />
+
+      @for (post of posts; track $index) {
+        <div class="container">
+           <p [ngStyle]="returnStyle(post)">
+            {{ post.content }} Added into the list!!
+          </p>
+        </div>
+      }
+
+    </div>
+  </div>
+</div>
