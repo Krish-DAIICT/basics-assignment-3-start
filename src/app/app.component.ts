@@ -8,7 +8,7 @@ import { iPost } from './post.interface';
 })
 export class AppComponent {
   posts: iPost[] = [];
-  showCont: boolean = false;
+  showCont: boolean = true;
   push_str: string = "";
 
   addThing() {
